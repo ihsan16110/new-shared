@@ -1,0 +1,39 @@
+.workouts{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+
+.workout-container{
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	grid-gap: 10px;
+}
+.exercise a{
+	font-size: 30px;
+	color: #76448A;
+}
+.exercise a:hover{
+	color: #76448A;
+}
+.workout-container .name .name-img img{
+	height: 70px;
+	width: 70px;
+	border-radius: 40%;
+}
+
+.workout-container .break span{
+	border-radius: 50%;
+	background-color: #ffffff;
+	padding: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.workout-container .activity button{
+	background-color: #76448A;
+
+}
+.workout-container .activity button:hover{
+	background-color: #76448A;
+}
