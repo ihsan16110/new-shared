@@ -37,3 +37,25 @@
 .workout-container .activity button:hover{
 	background-color: #76448A;
 }
+
+#workout1{
+	display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.workouts{
+
+	grid-template-columns: repeat(1, 1fr);
+
+}
+
+#workout1{
+	display: block;
+}
+
+#workout{
+	display: none;
+}
+
+}

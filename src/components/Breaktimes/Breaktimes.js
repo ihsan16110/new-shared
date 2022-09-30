@@ -5,8 +5,8 @@ import {useState} from 'react';
 const Breaktimes = () => {
 	const breaktimes = [10,20,30,40]
 	const [time, setTime] = useState([]);
-	const handleBreakTime = (breaktime) =>{
-	const newTime = [ breaktime];
+	const handleBreakTime = (event) =>{
+	const newTime  = event.target.innerText ;
 	setTime(newTime);
 
 }
@@ -22,30 +22,30 @@ const Breaktimes = () => {
 						 ></Breaktime>)
 					}
 						*/}
+
+						{
+						breaktimes.map(breaktime => <Breaktime
+						 
+						 handleBreakTime={handleBreakTime}
+						 ></Breaktime>)
+					}
+						
 					</div>
 				</div>
 		</div>
 	)
 }
 
-// const Breaktime = (props) => {
+const Breaktime = (props) => {
 
-// return (
-// <div>
-// 	<div class="col-lg-3 col-6">
-// 		<span  >{props.breaktime.[0]}</span>
-// 	</div>
-// 	<div class="col-lg-3 col-6">
-// 		<span  >{props.breaktime.[1]}</span>
-// 	</div>
-// 	<div class="col-lg-3 col-6">
-// 		<span  >{props.breaktime.[2]}</span>
-// 	</div>
-// 	<div class="col-lg-3 col-6">
-// 		<span  >{props.breaktime.[3]}</span>
-// 	</div>
-// </div>
-// )
-// }
+return (
+<div>
+	<div class="col-lg-3 col-6">
+		<span  onClick={(event) => props.handleBreakTime(event)}>10</span>
+	</div>
+	
+</div>
+)
+}
 
 export default Breaktimes
